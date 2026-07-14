@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibot Investments - Smart Wealth & Growth</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            light: '#fbbf24',
+                            DEFAULT: '#f59e0b',
+                            dark: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Creative Theme Styling -->
+<style>
+    /* Premium Modern Pagination Bullet (Dynamic Progress Line) */
+    .swiper-pagination-bullet {
+        background: rgba(255, 255, 255, 0.2) !important;
+        width: 35px;
+        height: 4px;
+        border-radius: 2px;
+        opacity: 1;
+        transition: all 0.4s ease;
+    }
+    .swiper-pagination-bullet-active {
+        background: linear-gradient(90deg, #fbbf24, #d97706) !important;
+        width: 60px;
+    }
+
+    /* Creative Glassmorphic Navigation Buttons */
+    .creative-nav-btn {
+        width: 50px;
+        height: 50px;
+        background: rgba(24, 24, 27, 0.4);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(251, 191, 36, 0.2);
+        border-radius: 50%;
+        color: #fbbf24;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .creative-nav-btn:hover {
+        background: #fbbf24;
+        color: #09090b;
+        box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+        border-color: #fbbf24;
+    }
+    .creative-nav-btn::after {
+        font-size: 18px !important;
+        font-weight: bold;
+    }
+
+    /* Text Animation Timing Control */
+    .swiper-slide-active .animate-fade-up {
+        animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .swiper-slide-active .animate-delay-1 { animation-delay: 0.2s; }
+    .swiper-slide-active .animate-delay-2 { animation-delay: 0.4s; }
+    .swiper-slide-active .animate-delay-3 { animation-delay: 0.6s; }
+</style>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white min-h-screen">
+
+    <!-- HEADER / NAVBAR START -->
+    <nav class="bg-zinc-950/90 backdrop-blur-md text-white border-b border-amber-500/10 sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo Section (Ibot Investments) -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="flex items-center gap-2 group">
+                        <!-- Futuristic Investment Hexagon Logo Icon -->
+                        <div class="h-9 w-9 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-lg flex items-center justify-center shadow-md shadow-amber-500/20 group-hover:scale-105 transition duration-300">
+                            <svg class="w-5 h-5 text-zinc-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500">
+                            IBOT <span class="text-white font-light">INVESTMENTS</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation Menu -->
+                <div class="hidden xl:flex items-center space-x-6">
+                    <a href="#about" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition duration-300">About</a>
+                    <a href="#industries" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition duration-300">Industries</a>
+                    <a href="#growth-vault" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition duration-300 flex items-center gap-1">
+                        The Growth Vault
+                        <span class="inline-block h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                    </a>
+                    <a href="#how-it-works" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition duration-300">How it works</a>
+                    <a href="#subscriptions" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition duration-300">Subscriptions</a>
+                    <a href="#opportunity" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition duration-300">Opportunity</a>
+                </div>
+
+                <!-- Desktop Action Buttons (Login / Register) -->
+                <div class="hidden xl:flex items-center space-x-4">
+                    <a href="#login" class="text-sm font-medium text-zinc-300 hover:text-amber-400 px-4 py-2 transition duration-300">
+                        Login
+                    </a>
+                    <a href="#register" class="bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 text-zinc-950 text-sm font-semibold px-5 py-2.5 rounded shadow-lg shadow-amber-500/10 hover:shadow-amber-500/20 transition duration-300 transform hover:-translate-y-0.5">
+                        Register
+                    </a>
+                </div>
+
+                <!-- Mobile & Tablet Menu Button (Hamburger) -->
+                <div class="flex xl:hidden">
+                    <button id="mobile-menu-button" class="text-zinc-400 hover:text-amber-400 focus:outline-none transition duration-300" aria-label="Toggle Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="hamburger-icon" class="block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-zinc-900 border-t border-amber-500/10 px-4 pt-2 pb-6 space-y-1 shadow-2xl">
+            <a href="#about" class="mobile-link block text-base font-medium text-zinc-300 hover:text-amber-400 py-2.5 px-3 rounded-md hover:bg-zinc-800/50 transition">About</a>
+            <a href="#industries" class="mobile-link block text-base font-medium text-zinc-300 hover:text-amber-400 py-2.5 px-3 rounded-md hover:bg-zinc-800/50 transition">Industries</a>
+            <a href="#growth-vault" class="mobile-link block text-base font-medium text-zinc-300 hover:text-amber-400 py-2.5 px-3 rounded-md hover:bg-zinc-800/50 transition">The Growth Vault</a>
+            <a href="#how-it-works" class="mobile-link block text-base font-medium text-zinc-300 hover:text-amber-400 py-2.5 px-3 rounded-md hover:bg-zinc-800/50 transition">How it works</a>
+            <a href="#subscriptions" class="mobile-link block text-base font-medium text-zinc-300 hover:text-amber-400 py-2.5 px-3 rounded-md hover:bg-zinc-800/50 transition">Subscriptions</a>
+            <a href="#opportunity" class="mobile-link block text-base font-medium text-zinc-300 hover:text-amber-400 py-2.5 px-3 rounded-md hover:bg-zinc-800/50 transition">Opportunity</a>
+            
+            <div class="pt-4 mt-2 border-t border-zinc-800/60 flex flex-col space-y-3 px-3">
+                <a href="#login" class="mobile-link text-center text-zinc-300 hover:text-amber-400 font-medium py-2.5 transition">
+                    Login
+                </a>
+                <a href="#register" class="mobile-link text-center bg-gradient-to-r from-amber-500 to-yellow-600 text-zinc-950 font-semibold py-3 rounded-md shadow-lg shadow-amber-500/5">
+                    Register
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- HEADER / NAVBAR END -->
+
+<!-- CREATIVE HERO SLIDER START -->
+<section class="relative w-full h-[90vh] bg-zinc-950 overflow-hidden">
+    
+    <!-- Ambient Creative Elements (Global Background Glows) -->
+    <div class="absolute top-10 right-10 w-96 h-96 bg-amber-500/10 blur-[150px] rounded-full pointer-events-none z-10"></div>
+    <div class="absolute bottom-10 left-10 w-[30rem] h-[30rem] bg-amber-600/5 blur-[180px] rounded-full pointer-events-none z-10"></div>
+
+    <div class="swiper creativeHeroSwiper w-full h-full">
+        <div class="swiper-wrapper">
+            
+            <!-- SLIDE 1: Think Beyond -->
+            <div class="swiper-slide relative w-full h-full flex items-center overflow-hidden">
+                <!-- Image Container with Creative Zoom Animation -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[8000ms] ease-out scale-105 swiper-image" 
+                     style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');"></div>
+                <!-- Dual Gradient Overlay: Dark side + Bottom shadow -->
+                <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                
+                <!-- Content Area -->
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6 uppercase tracking-widest animate-fade-up animate-delay-1">
+                        <span class="flex h-2 w-2 rounded-full bg-amber-400 animate-ping"></span>
+                        Premium Asset Class
+                    </div>
+                    
+                    <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6 text-white leading-[1.1] max-w-4xl animate-fade-up animate-delay-2">
+                        Think beyond, <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 drop-shadow-[0_2px_20px_rgba(251,191,36,0.15)]">Do more.</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-zinc-400 max-w-2xl mb-10 leading-relaxed font-light tracking-wide animate-fade-up animate-delay-3">
+                        Experience the Future of Ownership: From Elite Real Estate to Virtual Assets.
+                    </p>
+                    
+                    <div class="flex flex-row items-center gap-5 animate-fade-up animate-delay-3">
+                        <a href="#about" class="group relative inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 text-zinc-950 text-sm font-bold tracking-widest uppercase px-8 py-4 rounded overflow-hidden shadow-xl shadow-amber-500/20 transition-all duration-300 transform hover:-translate-y-0.5">
+                            Know More
+                        </a>
+                        <a href="#subscriptions" class="border border-zinc-700 hover:border-amber-400/60 text-zinc-300 hover:text-white text-sm font-bold tracking-widest uppercase px-8 py-4 rounded bg-zinc-900/30 backdrop-blur-sm transition duration-300">
+                            Our Plans
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: The Growth Vault -->
+            <div class="swiper-slide relative w-full h-full flex items-center overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[8000ms] ease-out scale-105 swiper-image" 
+                     style="background-image: url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1920&q=80');"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6 uppercase tracking-widest animate-fade-up animate-delay-1">
+                        High Yield Modules
+                    </div>
+                    
+                    <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6 text-white leading-[1.1] max-w-4xl animate-fade-up animate-delay-2">
+                        The Future of <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500">Wealth Logic.</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-zinc-400 max-w-2xl mb-10 leading-relaxed font-light tracking-wide animate-fade-up animate-delay-3">
+                        Unlock smart automation algorithms built to shield, adapt, and scale assets globally.
+                    </p>
+                    
+                    <div class="flex flex-row items-center gap-5 animate-fade-up animate-delay-3">
+                        <a href="#growth-vault" class="bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 text-zinc-950 text-sm font-bold tracking-widest uppercase px-8 py-4 rounded shadow-xl shadow-amber-500/20 transition-all duration-300 transform hover:-translate-y-0.5">
+                            Enter Vault
+                        </a>
+                        <a href="#opportunity" class="border border-zinc-700 hover:border-amber-400/60 text-zinc-300 hover:text-white text-sm font-bold tracking-widest uppercase px-8 py-4 rounded bg-zinc-900/30 backdrop-blur-sm transition duration-300">
+                            Opportunity
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Custom Styled Navigation Arrows -->
+        <div class="swiper-button-next creative-nav-btn !hidden lg:!flex !right-8"></div>
+        <div class="swiper-button-prev creative-nav-btn !hidden lg:!flex !left-8"></div>
+        
+        <!-- Premium Horizontal Progress Indicator -->
+        <div class="swiper-pagination !bottom-12 max-w-7xl mx-auto left-0 right-0 !text-left px-4 sm:px-6 lg:px-8"></div>
+    </div>
+</section>
+<!-- CREATIVE HERO SLIDER END -->
+
+
+    <!-- MAIN SINGLE PAGE CONTENT -->
+    <main id="home">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden py-24 lg:py-36 border-b border-zinc-900">
+            <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/5 blur-[130px] rounded-full pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6 uppercase tracking-widest">
+                    Next-Generation Investment Platform
+                </span>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 max-w-5xl mx-auto leading-tight">
+                    Navigate Markets with <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500">Ibot Intelligence</span>
+                </h1>
+                <p class="text-base sm:text-xl text-zinc-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                    Empowering institutional and retail investors with high-yield industrial algorithms, secure asset vaults, and transparent growth models.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#register" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-yellow-600 text-zinc-950 font-bold px-8 py-4 rounded shadow-xl shadow-amber-500/10 transition duration-300 transform hover:-translate-y-0.5 text-center">
+                        Get Started Instantly
+                    </a>
+                    <a href="#growth-vault" class="w-full sm:w-auto border border-zinc-800 hover:border-amber-500/40 hover:bg-zinc-900/40 text-zinc-300 hover:text-white font-medium px-8 py-4 rounded transition duration-300 text-center">
+                        View The Growth Vault
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="relative bg-zinc-950 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+  <!-- Subtle background ambient glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto text-center relative z-10">
+    <!-- Creative Paragraph Wrapper -->
+    <p class="text-2xl sm:text-4xl lg:text-5xl font-bold text-zinc-100 leading-[1.5] sm:leading-[1.6] lg:leading-[1.6] tracking-wide select-none">
+      
+      We’re 
+      <!-- Inline Image 1 -->
+      <span class="inline-flex items-center justify-center translate-y-1 sm:translate-y-2 mx-1 group cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=120&q=80" alt="Unlocking" class="w-8 h-8 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-amber-500/40 group-hover:border-amber-400 group-hover:scale-110 shadow-lg shadow-amber-500/10 transition-all duration-300" />
+      </span>
+      unlocking 
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 drop-shadow-[0_2px_10px_rgba(251,191,36,0.1)]">fractional ownership</span> 
+      
+      <!-- Inline Image 2 -->
+      <span class="inline-flex items-center justify-center translate-y-1 sm:translate-y-2 mx-1 group cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=120&q=80" alt="Growth" class="w-8 h-8 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-amber-500/40 group-hover:border-amber-400 group-hover:scale-110 shadow-lg shadow-amber-500/10 transition-all duration-300" />
+      </span>
+      in high-growth assets 
+      
+      <!-- Inline Image 3 -->
+      <span class="inline-flex items-center justify-center translate-y-1 sm:translate-y-2 mx-1 group cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=120&q=80" alt="Luxury Hotels" class="w-8 h-8 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-amber-500/40 group-hover:border-amber-400 group-hover:scale-110 shadow-lg shadow-amber-500/10 transition-all duration-300" />
+      </span>
+      – luxury hotels, casinos, and iGaming blending 
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">digital innovation</span> 
+      
+      <!-- Inline Image 4 -->
+      <span class="inline-flex items-center justify-center translate-y-1 sm:translate-y-2 mx-1 group cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&q=80" alt="Innovation" class="w-8 h-8 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-amber-500/40 group-hover:border-amber-400 group-hover:scale-110 shadow-lg shadow-amber-500/10 transition-all duration-300" />
+      </span>
+      with real-world investments for 
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500">sustainable wealth</span> 
+      
+      <!-- Inline Image 5 -->
+      <span class="inline-flex items-center justify-center translate-y-1 sm:translate-y-2 mx-1 group cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=120&q=80" alt="Rewards" class="w-8 h-8 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-amber-500/40 group-hover:border-amber-400 group-hover:scale-110 shadow-lg shadow-amber-500/10 transition-all duration-300" />
+      </span>
+      & long-term rewards.
+
+    </p>
+  </div>
+</section>
+
+        <!-- Dummy Sections for Smooth Scrolling Experience -->
+        <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center border-b border-zinc-900">
+            <h2 class="text-3xl font-bold text-amber-400 mb-4">About Us</h2>
+            <p class="text-zinc-400 max-w-2xl mx-auto">Elite fund management built on robust algorithmic logic and premium transparency.</p>
+        </section>
+
+        <section id="industries" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center border-b border-zinc-900">
+            <h2 class="text-3xl font-bold text-amber-400 mb-4">Industries</h2>
+            <p class="text-zinc-400 max-w-2xl mx-auto">We deploy capital into high-growth tech, green energy, and cross-border digital assets.</p>
+        </section>
+
+        <section id="growth-vault" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center border-b border-zinc-900">
+            <h2 class="text-3xl font-bold text-amber-400 mb-4">The Growth Vault</h2>
+            <p class="text-zinc-400 max-w-2xl mx-auto">Secure compounds where capital multiplies under dynamic automation analytics.</p>
+        </section>
+
+
+
+        <section class="relative bg-zinc-950 text-zinc-300 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden font-sans">
+    
+    <!-- Ambient Background Glows -->
+    <div class="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-amber-500/[0.03] blur-[130px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-10 w-[400px] h-[400px] bg-yellow-600/[0.02] blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            <!-- LEFT CONTENT COLUMN (Takes 6 Columns) -->
+            <div class="lg:col-span-6 space-y-8">
+                
+                <!-- Creative Icon Badge -->
+                <div class="inline-flex items-center justify-center h-14 w-14 rounded-full bg-zinc-900 border border-amber-500/20 text-amber-400 shadow-lg shadow-amber-500/5">
+                    <!-- Shaking Hands / Deal Vector Icon -->
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                </div>
+
+                <!-- Section Heading -->
+                <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                    Why Choose Us?
+                </h2>
+
+                <!-- Main Description (High Readability) -->
+                <p class="text-base sm:text-lg text-zinc-400 leading-relaxed max-w-xl">
+                    Unlock unparalleled opportunities with our innovative investment model. Earn passive income, expand globally, and enjoy luxury rewards – all backed by real-world, high-growth assets and transparency.
+                </p>
+
+                <!-- Features Points Matrix (2x3 Grid System) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 pt-4 text-base">
+                    
+                    <!-- Point 1 -->
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-400 font-bold text-lg mt-0.5">•</span>
+                        <p class="text-zinc-300"><strong class="text-white font-semibold">First-Mover Advantage</strong> – Pioneering Fractional Ownership</p>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-400 font-bold text-lg mt-0.5">•</span>
+                        <p class="text-zinc-300"><strong class="text-white font-semibold">Real-World Asset-Backed</strong> – Secure Tangible Assets</p>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-400 font-bold text-lg mt-0.5">•</span>
+                        <p class="text-zinc-300"><strong class="text-white font-semibold">Multiple Income Streams</strong> – Diverse Earning Opportunities</p>
+                    </div>
+
+                    <!-- Point 4 -->
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-400 font-bold text-lg mt-0.5">•</span>
+                        <p class="text-zinc-300"><strong class="text-white font-semibold">Scalable Global Business</strong> – Expand Without Limits</p>
+                    </div>
+
+                    <!-- Point 5 -->
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-400 font-bold text-lg mt-0.5">•</span>
+                        <p class="text-zinc-300"><strong class="text-white font-semibold">Lifestyle & Luxury Rewards</strong> – Exclusive Elite Benefits</p>
+                    </div>
+
+                    <!-- Point 6 -->
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-400 font-bold text-lg mt-0.5">•</span>
+                        <p class="text-zinc-300"><strong class="text-white font-semibold">Proven & Transparent System</strong> – Structured, Trusted Growth</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT MASONRY GALLERY WALL (Takes 6 Columns) -->
+            <div class="lg:col-span-6 h-[550px] sm:h-[650px] overflow-y-auto pr-2 custom-scrollbar grid grid-cols-3 gap-3 rounded-2xl">
+                
+                <!-- Column 1 -->
+                <div class="space-y-3">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" class="w-full h-44 object-cover rounded-xl border border-zinc-900 filter grayscale hover:grayscale-0 transition duration-500" alt="Asset">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" class="w-full h-64 object-cover rounded-xl border border-zinc-900 filter grayscale hover:grayscale-0 transition duration-500" alt="Lifestyle">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" class="w-full h-40 object-cover rounded-xl border border-zinc-900 filter grayscale hover:grayscale-0 transition duration-500" alt="Tech">
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-3 pt-8">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80" class="w-full h-60 object-cover rounded-xl border border-zinc-900 filter grayscale hover:grayscale-0 transition duration-500" alt="Hotel">
+                    
+                    <!-- Creative Quote Block in between images -->
+                    <div class="w-full h-36 bg-gradient-to-br from-zinc-900 to-zinc-950 p-4 rounded-xl border border-amber-500/20 flex flex-col justify-center text-center">
+                        <span class="text-amber-400 text-3xl font-serif leading-none">“</span>
+                        <p class="text-[11px] sm:text-xs tracking-wider uppercase text-zinc-300 font-bold leading-snug">You are remembered for the rules you break.</p>
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=400&q=80" class="w-full h-52 object-cover rounded-xl border border-zinc-900 filter grayscale hover:grayscale-0 transition duration-500" alt="Wealth">
+                </div>
+
+                <!-- Column 3 -->
+                <div class="space-y-3">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80" class="w-full h-64 object-cover rounded-xl border border-zinc-900 filter grayscale hover:grayscale-0 transition duration-500" alt="Executive">
+                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=400&q=80" class="w-full h-44 object-cover rounded-xl border border-zinc-900 filter grayscale hover:grayscale-0 transition duration-500" alt="Crypto">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" class="w-full h-48 object-cover rounded-xl border border-zinc-900 filter grayscale hover:grayscale-0 transition duration-500" alt="Growth">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Optional CSS for smooth inner gallery scrolling -->
+<style>
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 3px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(24, 24, 27, 0.4);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(251, 191, 36, 0.2);
+        border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(251, 191, 36, 0.4);
+    }
+</style>
+
+
+        
+
+
+
+    </main>
+
+    <footer class="bg-zinc-950 text-zinc-400 font-sans border-t border-amber-500/10 pt-16 pb-8 relative overflow-hidden">
+    <!-- Subtle Background Glow -->
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- TOP SECTION: Links & Auth Buttons -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-zinc-900">
+            
+            <!-- Link Categories (Takes 7 Cols on Desktop) -->
+            <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
+                <!-- Company Column -->
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-100 mb-4">Company</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#home" class="hover:text-amber-400 transition duration-200">Home</a></li>
+                        <li><a href="#about" class="hover:text-amber-400 transition duration-200">About</a></li>
+                        <li><a href="#industries" class="hover:text-amber-400 transition duration-200">Industries</a></li>
+                        <li><a href="#growth-vault" class="hover:text-amber-400 transition duration-200">The Growth Vault</a></li>
+                    </ul>
+                </div>
+
+                <!-- Business Column -->
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-100 mb-4">Business</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#opportunity" class="hover:text-amber-400 transition duration-200">Opportunity</a></li>
+                        <li><a href="#how-it-works" class="hover:text-amber-400 transition duration-200">How it Works</a></li>
+                        <li><a href="#subscriptions" class="hover:text-amber-400 transition duration-200">Subscriptions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Fineprint Column -->
+                <div class="col-span-2 sm:col-span-1">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-100 mb-4">Fineprint</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#contact" class="hover:text-amber-400 transition duration-200">Contact</a></li>
+                        <li><a href="#login" class="hover:text-amber-400 transition duration-200">My Account</a></li>
+                        <li><a href="#privacy" class="hover:text-amber-400 transition duration-200">Privacy Policy</a></li>
+                        <li><a href="#terms" class="hover:text-amber-400 transition duration-200">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Upper Right Auth Buttons (Takes 5 Cols on Desktop) -->
+            <div class="lg:col-span-5 flex flex-col justify-center space-y-4 max-w-md w-full lg:ml-auto">
+                <!-- My Account Button -->
+                <a href="#login" class="flex items-center justify-center gap-2 border border-zinc-800 hover:border-amber-400/50 bg-zinc-900/40 text-zinc-200 hover:text-white py-3 px-6 rounded-lg text-sm font-medium transition duration-300">
+                    <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                    My Account
+                </a>
+                <!-- Register Button -->
+                <a href="#register" class="flex items-center justify-center gap-2 border border-zinc-800 hover:border-amber-400/50 bg-zinc-900/40 text-zinc-200 hover:text-white py-3 px-6 rounded-lg text-sm font-medium transition duration-300">
+                    <span class="text-amber-400 font-bold text-lg leading-none translate-y-[-1px]">+</span>
+                    Register
+                </a>
+            </div>
+        </div>
+
+        <!-- BOTTOM SECTION: Logo, Socials & Premium White Newsletter Card -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pt-12 items-center">
+            
+            <!-- Left Side: Logo & Social Media Icons -->
+            <div class="lg:col-span-6 space-y-6">
+                <!-- Branding -->
+                <div class="flex items-center gap-2.5">
+                    <div class="h-8 w-8 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-lg flex items-center justify-center shadow-md shadow-amber-500/20">
+                        <svg class="w-4 h-4 text-zinc-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500">
+                        IBOT <span class="text-white font-light">INVESTMENTS</span>
+                    </span>
+                </div>
+
+                <!-- Social Media Badges (Matching the Image Style) -->
+                <div class="flex items-center space-x-3">
+                    <!-- Instagram -->
+                    <a href="#" class="w-9 h-9 rounded-full bg-zinc-900 hover:bg-amber-400 text-zinc-400 hover:text-zinc-950 flex items-center justify-center border border-zinc-800 transition duration-300">
+                        <i class="fab fa-instagram text-sm"></i>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="#" class="w-9 h-9 rounded-full bg-zinc-900 hover:bg-amber-400 text-zinc-400 hover:text-zinc-950 flex items-center justify-center border border-zinc-800 transition duration-300">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <!-- Telegram -->
+                    <a href="#" class="w-9 h-9 rounded-full bg-zinc-900 hover:bg-amber-400 text-zinc-400 hover:text-zinc-950 flex items-center justify-center border border-zinc-800 transition duration-300">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.483-.168.592-.446.789-.687.809-.527.047-.924-.319-1.433-.628-.797-.484-1.246-.784-2.019-1.258-.894-.548-.314-.85.195-1.343.133-.129 2.444-2.102 2.489-2.28.006-.022.011-.104-.042-.147-.053-.044-.132-.03-.189-.018-.082.018-1.383.82-3.903 2.392-.369.237-.704.354-1.002.348-.329-.007-.962-.175-1.433-.317-.578-.175-1.037-.267-1.002-.574.018-.16.257-.326.717-.497 2.809-1.144 4.685-1.9 5.627-2.269 2.682-.962 3.238-1.129 3.602-1.135.08-.002.26.017.377.108.1.077.128.181.136.262.007.078.01.248-.007.414z"/></svg>
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:info@ibotinvestments.com" class="w-9 h-9 rounded-full bg-zinc-900 hover:bg-amber-400 text-zinc-400 hover:text-zinc-950 flex items-center justify-center border border-zinc-800 transition duration-300">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L22 8m-9+11h.01M21 16V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2h14a2 2 0 002-2z"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: The Premium White CTA Card -->
+            <div class="lg:col-span-6 w-full">
+                <div class="bg-white text-zinc-900 p-8 sm:p-10 rounded-2xl sm:rounded-3xl shadow-2xl relative overflow-hidden">
+                    <h3 class="text-2xl font-bold tracking-tight text-zinc-950 mb-3">
+                        Unlock Your Financial Future
+                    </h3>
+                    <p class="text-sm text-zinc-600 leading-relaxed mb-6">
+                        Join the world's first <span class="font-semibold text-zinc-950">fractional ownership</span> platform in <span class="font-semibold text-zinc-950">iGaming & Real Estate</span>. Secure your stake in high-value assets today!
+                    </p>
+                    <a href="#register" class="inline-block bg-amber-400 hover:bg-amber-500 text-zinc-950 font-bold tracking-wider uppercase text-xs px-8 py-3.5 rounded-lg shadow-md shadow-amber-400/20 transition duration-300">
+                        Register
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT NOTIFICATION -->
+        <div class="pt-12 mt-12 border-t border-zinc-900/60 text-xs text-zinc-600 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>Copyright © 2026 Ibot Investments. All Rights Reserved.</p>
+            <p class="text-zinc-500 font-light">Engineered for Secure Scale</p>
+        </div>
+
+    </div>
+</footer>
+
+<footer class="bg-zinc-950 text-zinc-300 font-sans border-t border-zinc-900 pt-20 pb-12 relative overflow-hidden select-none">
+    
+    <!-- Unique Tech Architecture Grid Background Lines -->
+    <div class="absolute inset-y-0 left-1/4 w-[1px] bg-zinc-900/50 hidden lg:block pointer-events-none"></div>
+    <div class="absolute inset-y-0 left-2/4 w-[1px] bg-zinc-900/50 hidden lg:block pointer-events-none"></div>
+    
+    <!-- Futuristic Ambient Mesh Glows -->
+    <div class="absolute top-0 right-1/4 w-[350px] h-[350px] bg-amber-500/[0.03] blur-[100px] rounded-full pointer-events-none"></div>
+    <div class="absolute -bottom-20 -left-10 w-[400px] h-[400px] bg-yellow-600/[0.02] blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- MAIN SECTION -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 pb-16">
+            
+            <!-- LEFT PANEL: Brand Info & Socials (Takes 4 Columns) -->
+            <div class="lg:col-span-4 flex flex-col justify-between space-y-8 lg:pr-8">
+                <div class="space-y-5">
+                    <!-- Tech Brand Logo -->
+                    <a href="#home" class="flex items-center gap-3 group">
+                        <div class="h-11 w-11 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center shadow-lg shadow-amber-500/10 group-hover:rotate-6 transition duration-300">
+                            <svg class="w-6 h-6 text-zinc-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500">
+                            IBOT <span class="text-white font-light text-base tracking-normal block lg:inline">INVESTMENTS</span>
+                        </span>
+                    </a>
+                    <!-- Increased Font Size and Line Height for High Readability -->
+                    <p class="text-sm sm:text-base text-zinc-400 max-w-sm leading-relaxed pt-2">
+                        Next-gen industrial algorithm trading and fractional luxury asset compounds. Engineered for secure, decentralized capital scaling.
+                    </p>
+                </div>
+
+                <!-- Sleek Micro Social Badges -->
+                <div class="flex items-center gap-3">
+                    <a href="#" class="w-9 h-9 rounded-lg bg-zinc-900/60 text-zinc-400 hover:text-amber-400 border border-zinc-800/80 flex items-center justify-center hover:bg-zinc-900 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                    <a href="#" class="w-9 h-9 rounded-lg bg-zinc-900/60 text-zinc-400 hover:text-amber-400 border border-zinc-800/80 flex items-center justify-center hover:bg-zinc-900 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                    <a href="#" class="w-9 h-9 rounded-lg bg-zinc-900/60 text-zinc-400 hover:text-amber-400 border border-zinc-800/80 flex items-center justify-center hover:bg-zinc-900 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.483-.168.592-.446.789-.687.809-.527.047-.924-.319-1.433-.628-.797-.484-1.246-.784-2.019-1.258-.894-.548-.314-.85.195-1.343.133-.129 2.444-2.102 2.489-2.28.006-.022.011-.104-.042-.147-.053-.044-.132-.03-.189-.018-.082.018-1.383.82-3.903 2.392-.369.237-.704.354-1.002.348-.329-.007-.962-.175-1.433-.317-.578-.175-1.037-.267-1.002-.574.018-.16.257-.326.717-.497 2.809-1.144 4.685-1.9 5.627-2.269 2.682-.962 3.238-1.129 3.602-1.135.08-.002.26.017.377.108.1.077.128.181.136.262.007.078.01.248-.007.414z"/></svg></a>
+                </div>
+            </div>
+
+            <!-- CENTER PANEL: Minimal Navigation Matrix (Takes 4 Columns) -->
+            <div class="lg:col-span-4 grid grid-cols-2 gap-4 lg:pl-6">
+                <!-- Group 1 -->
+                <div class="space-y-4">
+                    <!-- Headings size increased to text-xs with tracking for neat premium look -->
+                    <span class="text-xs font-bold tracking-[0.2em] text-amber-500 uppercase block">Navigation</span>
+                    <!-- Link fonts bumped to text-base for high readability -->
+                    <ul class="space-y-3.5 text-base">
+                        <li><a href="#about" class="hover:text-white hover:underline decoration-amber-500 underline-offset-4 transition duration-200">About</a></li>
+                        <li><a href="#industries" class="hover:text-white hover:underline decoration-amber-500 underline-offset-4 transition duration-200">Industries</a></li>
+                        <li><a href="#growth-vault" class="hover:text-white hover:underline decoration-amber-500 underline-offset-4 transition duration-200">Growth Vault</a></li>
+                        <li><a href="#opportunity" class="hover:text-white hover:underline decoration-amber-500 underline-offset-4 transition duration-200">Opportunity</a></li>
+                    </ul>
+                </div>
+                <!-- Group 2 -->
+                <div class="space-y-4">
+                    <span class="text-xs font-bold tracking-[0.2em] text-amber-500 uppercase block">Legal Core</span>
+                    <ul class="space-y-3.5 text-base">
+                        <li><a href="#privacy" class="hover:text-white transition duration-200">Privacy Policy</a></li>
+                        <li><a href="#terms" class="hover:text-white transition duration-200">Terms & Cond.</a></li>
+                        <li><a href="#contact" class="hover:text-white transition duration-200">Contact Desk</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- RIGHT PANEL: Creative Floating Cyber Card (Takes 4 Columns) -->
+            <div class="lg:col-span-4">
+                <div class="relative group rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-950 p-6 sm:p-7 border border-zinc-800/80 shadow-2xl overflow-hidden hover:border-amber-500/30 transition-all duration-500">
+                    <div class="absolute -top-12 -right-12 w-24 h-24 bg-amber-500/10 blur-xl rounded-full group-hover:bg-amber-500/20 transition-all duration-500"></div>
+                    
+                    <span class="inline-flex items-center gap-1 text-[10px] font-extrabold tracking-[0.25em] bg-amber-500/10 text-amber-400 px-2.5 py-1 rounded border border-amber-500/20 uppercase mb-4">
+                        Secure Vault Access
+                    </span>
+                    
+                    <!-- Title font bumped to text-lg -->
+                    <h4 class="text-lg font-bold text-zinc-100 mb-2A">Unlock Your Financial Future</h4>
+                    <p class="text-sm text-zinc-400 leading-relaxed mb-6">
+                        Join the world's first fractional ownership system in high-growth iGaming & Real Estate.
+                    </p>
+                    
+                    <!-- Double Stack Creative Actions (Font updated to text-sm) -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="#register" class="flex items-center justify-center bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 text-zinc-950 text-sm font-bold tracking-wider uppercase py-3.5 rounded-lg shadow-lg shadow-amber-500/5 transition duration-300">
+                            Register
+                        </a>
+                        <a href="#login" class="flex items-center justify-center bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white text-sm font-medium py-3.5 rounded-lg transition duration-300">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- METRIC BAR & COPYRIGHT -->
+        <div class="pt-8 mt-4 border-t border-zinc-900/80 flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- Increased base utility font sizes -->
+            <div class="flex items-center gap-6 text-xs sm:text-sm text-zinc-400 tracking-wide order-2 md:order-1">
+                <p>Copyright © 2026 Ibot Investments.</p>
+                <div class="hidden sm:flex items-center gap-1.5 text-zinc-500">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>All Engine Nodes Operational</span>
+                </div>
+            </div>
+            
+            <div class="text-xs text-zinc-500 font-mono tracking-widest order-1 md:order-2 uppercase">
+                LATENCY: 14ms // SECURE SSL
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    const creativeSwiper = new Swiper('.creativeHeroSwiper', {
+        loop: true,
+        speed: 1200, // Smooth transition pace
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            slideChangeTransitionStart: function () {
+                // Reset zoom scale on inactive images
+                const images = document.querySelectorAll('.swiper-image');
+                images.forEach(img => img.classList.remove('scale-100'));
+                images.forEach(img => img.classList.add('scale-105'));
+            },
+            slideChangeTransitionEnd: function () {
+                // Trigger slow architectural zoom in on active slide image
+                const activeSlide = this.slides[this.activeIndex];
+                const activeImg = activeSlide.querySelector('.swiper-image');
+                if(activeImg) {
+                    activeImg.classList.remove('scale-105');
+                    activeImg.classList.add('scale-100');
+                }
+            }
+        }
+    });
+</script>
+
+    <!-- JAVASCRIPT FOR MOBILE TOGGLE & SMOOTH SCROLL CLOSE -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        // Toggle Open/Close
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Close mobile menu immediately when any internal navigation link is clicked
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+
+        // Handle Responsive breakpoint auto collapse
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1280) { // 1280px is xl breakpoint
+                mobileMenu.classList.add('hidden');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

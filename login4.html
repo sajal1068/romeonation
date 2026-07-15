@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibotai - Login</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ibotai: {
+              gold: '#E0A30B',       /* Logo Golden color */
+              goldLight: '#FBBF24',  /* Lighter glow shade */
+              goldDark: '#B47E04',   /* Deep gold for hover/active states */
+              bg: '#1A2332',         /* Premium Deep Slate Blue (Replaced Black) */
+              card: '#243044',       /* Smooth Slate Surface Card */
+              input: '#1E293B',      /* Darker slate for fields */
+              border: '#334155'      /* Clean subtle slate border */
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-ibotai-bg flex items-center justify-center min-h-screen p-4 antialiased text-slate-100">
+
+  <!-- Background Glow Effects for Premium Tech Vibe -->
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-ibotai-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-ibotai-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <!-- Login Card Container -->
+  <div class="relative bg-ibotai-card p-8 md:p-10 rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.4)] w-full max-w-md border border-ibotai-border/80 transition-all duration-300 hover:border-ibotai-gold/30">
+    
+    <!-- Logo & Branding Header Area -->
+    <div class="text-center mb-8">
+      <div class="flex justify-center mb-4">
+        <!-- SVG Vector Replication of your Ibotai Logo -->
+        <svg class="h-14 w-auto" viewBox="0 0 500 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- 'I' -->
+          <rect x="30" y="20" width="16" height="100" rx="4" fill="#E0A30B"/>
+          <!-- 'b' -->
+          <path d="M78 20V120H94V78C94 62 106 50 122 50C138 50 148 62 148 78V120H164V74C164 44 146 32 122 32C104 32 90 42 84 54V20H78Z" fill="#E0A30B"/>
+          <!-- 'o' (Circuit/Tech Icon from your logo) -->
+          <g transform="translate(195, 35)">
+            <circle cx="40" cy="40" r="37" stroke="#E0A30B" stroke-width="6" fill="none"/>
+            <path d="M40 18V28M40 28H28V52H52V40M40 40H46" stroke="#E0A30B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="40" cy="18" r="3.5" fill="#E0A30B"/>
+            <circle cx="52" cy="40" r="3.5" fill="#E0A30B"/>
+            <circle cx="46" cy="40" r="3.5" fill="#E0A30B"/>
+          </g>
+          <!-- 't' -->
+          <path d="M310 30V46H294V60H310V100C310 114 318 120 332 120H344V106H334C328 106 326 104 326 98V60H346V46H326V30H310Z" fill="#E0A30B"/>
+          <!-- 'a' -->
+          <path d="M394 48C376 48 362 62 362 84C362 106 376 120 394 120C408 120 418 112 424 102V120H438V48H424V64C418 54 408 48 394 48ZM400 106C386 106 378 96 378 84C378 72 386 62 400 62C414 62 422 72 422 84C422 96 414 106 400 106Z" fill="#E0A30B"/>
+          <!-- 'i' -->
+          <rect x="466" y="48" width="16" height="72" rx="4" fill="#E0A30B"/>
+          <circle cx="474" cy="26" r="9" fill="#E0A30B"/>
+        </svg>
+      </div>
+      <p class="text-xs tracking-wider uppercase text-slate-400/80 font-bold">Secure Tech Portal</p>
+    </div>
+
+    <!-- Login Form -->
+    <form action="#" method="POST" class="space-y-5">
+      
+      <!-- Email Input Field -->
+      <div>
+        <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          placeholder="name@company.com"
+          class="w-full px-4 py-3 bg-ibotai-input border border-ibotai-border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-ibotai-gold focus:border-transparent text-sm transition duration-200"
+        >
+      </div>
+
+      <!-- Password Input Field -->
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <label for="password" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Password</label>
+          <a href="#" class="text-xs font-semibold text-ibotai-gold hover:text-ibotai-goldLight transition duration-150">Forgot Password?</a>
+        </div>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          required 
+          placeholder="••••••••"
+          class="w-full px-4 py-3 bg-ibotai-input border border-ibotai-border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-ibotai-gold focus:border-transparent text-sm transition duration-200"
+        >
+      </div>
+
+      <!-- Keep me logged in -->
+      <div class="flex items-center">
+        <input 
+          type="checkbox" 
+          id="remember" 
+          name="remember" 
+          class="h-4 w-4 bg-ibotai-input border-ibotai-border text-ibotai-gold focus:ring-offset-ibotai-card focus:ring-ibotai-gold rounded accent-ibotai-gold"
+        >
+        <label for="remember" class="ml-2 block text-sm text-slate-300 select-none">
+          Keep me signed in
+        </label>
+      </div>
+
+      <!-- Golden Theme Primary CTA Button -->
+      <button 
+        type="submit" 
+        class="w-full flex justify-center py-3.5 px-4 rounded-xl shadow-lg shadow-ibotai-gold/20 text-sm font-bold text-slate-900 bg-ibotai-gold hover:bg-ibotai-goldLight active:bg-ibotai-goldDark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-ibotai-card focus:ring-ibotai-gold transition duration-200 transform active:scale-[0.99] cursor-pointer"
+      >
+        Sign In to Portal
+      </button>
+
+    </form>
+
+    <!-- Footer Security Message -->
+    <div class="mt-8 pt-6 border-t border-ibotai-border text-center text-xs text-slate-400 flex items-center justify-center gap-1.5">
+      <svg class="w-3.5 h-3.5 fill-current text-ibotai-gold" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+      <span>End-to-end encrypted connection</span>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0B221A',    /* Deep Dark Green Background */
+              card: '#123026',    /* Slightly Lighter Green for Card */
+              gold: '#EAB308',    /* Golden Yellow Primary */
+              goldHover: '#CA8A04' /* Darker Gold for Hover States */
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-dark flex items-center justify-center min-h-screen p-4 text-gray-100">
+
+  <div class="bg-brand-card p-8 rounded-2xl shadow-2xl w-full max-w-md border border-emerald-950/50">
+    <!-- Header/Logo Area -->
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-brand-gold text-brand-dark font-black text-2xl mb-4 shadow-lg shadow-brand-gold/20">
+        V
+      </div>
+      <h2 class="text-2xl font-bold tracking-tight text-white">Welcome back</h2>
+      <p class="text-sm text-emerald-400/70 mt-1">Please enter your details to sign in</p>
+    </div>
+
+    <!-- Login Form -->
+    <form action="#" method="POST" class="space-y-5">
+      <!-- Email Input Field -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-emerald-300 mb-1.5">Email Address</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          placeholder="you@example.com"
+          class="w-full px-4 py-2.5 bg-brand-dark/50 border border-emerald-800/60 rounded-lg text-white placeholder-emerald-700/70 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold text-sm transition"
+        >
+      </div>
+
+      <!-- Password Input Field -->
+      <div>
+        <div class="flex items-center justify-between mb-1.5">
+          <label for="password" class="block text-sm font-medium text-emerald-300">Password</label>
+          <a href="#" class="text-xs font-semibold text-brand-gold hover:text-brand-goldHover transition">Forgot password?</a>
+        </div>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          required 
+          placeholder="••••••••"
+          class="w-full px-4 py-2.5 bg-brand-dark/50 border border-emerald-800/60 rounded-lg text-white placeholder-emerald-700/70 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold text-sm transition"
+        >
+      </div>
+
+      <!-- Remember Me Checkbox -->
+      <div class="flex items-center">
+        <input 
+          type="checkbox" 
+          id="remember-me" 
+          name="remember-me" 
+          class="h-4 w-4 bg-brand-dark/50 text-brand-gold focus:ring-brand-gold border-emerald-800/60 rounded transition accent-brand-gold"
+        >
+        <label for="remember-me" class="ml-2 block text-sm text-emerald-300/80 select-none">
+          Remember me for 30 days
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <button 
+        type="submit" 
+        class="w-full flex justify-center py-3 px-4 rounded-lg shadow-md text-sm font-bold text-brand-dark bg-brand-gold hover:bg-brand-goldHover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-brand-card focus:ring-brand-gold transition duration-150 cursor-pointer"
+      >
+        Sign in
+      </button>
+    </form>
+
+    <!-- Footer Link -->
+    <div class="mt-6 text-center text-sm text-emerald-400/60">
+      Don't have an account? 
+      <a href="#" class="font-semibold text-brand-gold hover:text-brand-goldHover transition">Sign up</a>
+    </div>
+  </div>
+
+</body>
+</html>

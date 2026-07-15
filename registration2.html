@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibotai - Verification Portal</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ibotai: {
+              gold: '#E0A30B',
+              goldLight: '#FBBF24',
+              goldDark: '#B47E04',
+              bg: '#1A2332',
+              card: '#243044',
+              input: '#1E293B',
+              border: '#334155'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-ibotai-bg flex items-center justify-center min-h-screen p-4 antialiased text-slate-100">
+
+  <!-- Background Glows -->
+  <div class="absolute top-0 right-1/4 w-96 h-96 bg-ibotai-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-ibotai-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <!-- Wizard Wrapper -->
+  <div class="relative bg-ibotai-card p-8 md:p-10 rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.4)] w-full max-w-lg border border-ibotai-border/80">
+    
+    <!-- Header Logo -->
+    <div class="text-center mb-8">
+      <div class="flex justify-center mb-4">
+        <!-- SVG Vector Replication of your Ibotai Logo -->
+        <svg class="h-10 w-auto" viewBox="0 0 500 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="30" y="20" width="16" height="100" rx="4" fill="#E0A30B"/>
+          <path d="M78 20V120H94V78C94 62 106 50 122 50C138 50 148 62 148 78V120H164V74C164 44 146 32 122 32C104 32 90 42 84 54V20H78Z" fill="#E0A30B"/>
+          <g transform="translate(195, 35)">
+            <circle cx="40" cy="40" r="37" stroke="#E0A30B" stroke-width="6" fill="none"/>
+            <path d="M40 18V28M40 28H28V52H52V40M40 40H46" stroke="#E0A30B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="40" cy="18" r="3.5" fill="#E0A30B"/><circle cx="52" cy="40" r="3.5" fill="#E0A30B"/><circle cx="46" cy="40" r="3.5" fill="#E0A30B"/>
+          </g>
+          <path d="M310 30V46H294V60H310V100C310 114 318 120 332 120H344V106H334C328 106 326 104 326 98V60H346V46H326V30H310Z" fill="#E0A30B"/>
+          <path d="M394 48C376 48 362 62 362 84C362 106 376 120 394 120C408 120 418 112 424 102V120H438V48H424V64C418 54 408 48 394 48ZM400 106C386 106 378 96 378 84C378 72 386 62 400 62C414 62 422 72 422 84C422 96 414 106 400 106Z" fill="#E0A30B"/>
+          <rect x="466" y="48" width="16" height="72" rx="4" fill="#E0A30B"/><circle cx="474" cy="26" r="9" fill="#E0A30B"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Live Step Indicators -->
+    <div class="mb-8">
+      <div class="flex items-center justify-between text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
+        <span id="stepLabel">Step 1 of 3</span>
+        <span id="stepTitle" class="text-ibotai-gold">Personal Profile</span>
+      </div>
+      <!-- Tracks UI -->
+      <div class="grid grid-cols-3 gap-2">
+        <div id="bar-1" class="h-1.5 bg-ibotai-gold rounded-full transition-all duration-300"></div>
+        <div id="bar-2" class="h-1.5 bg-ibotai-border rounded-full transition-all duration-300"></div>
+        <div id="bar-3" class="h-1.5 bg-ibotai-border rounded-full transition-all duration-300"></div>
+      </div>
+    </div>
+
+    <!-- Interactive Form -->
+    <form id="multiStepForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+      
+      <!-- ================= STEP 1: Basic Profile ================= -->
+      <div id="stepView-1" class="step-panel space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">First Name</label>
+            <input type="text" required placeholder="John" class="w-full px-4 py-3 bg-ibotai-input border border-ibotai-border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-ibotai-gold text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Last Name</label>
+            <input type="text" required placeholder="Doe" class="w-full px-4 py-3 bg-ibotai-input border border-ibotai-border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-ibotai-gold text-sm">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Email Address</label>
+          <input type="email" required placeholder="name@company.com" class="w-full px-4 py-3 bg-ibotai-input border border-ibotai-border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-ibotai-gold text-sm">
+        </div>
+      </div>
+
+      <!-- ================= STEP 2: Company Details ================= -->
+      <div id="stepView-2" class="step-panel space-y-4 hidden">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Company Name</label>
+          <input type="text" id="companyInput" placeholder="Ibotai Technologies" class="w-full px-4 py-3 bg-ibotai-input border border-ibotai-border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-ibotai-gold text-sm">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Phone Number</label>
+          <input type="tel" id="phoneInput" placeholder="9876543210" class="w-full px-4 py-3 bg-ibotai-input border border-ibotai-border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-ibotai-gold text-sm">
+        </div>
+      </div>
+
+      <!-- ================= STEP 3: Create Credentials ================= -->
+      <div id="stepView-3" class="step-panel space-y-4 hidden">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Password</label>
+          <input type="password" id="passInput" placeholder="••••••••" class="w-full px-4 py-3 bg-ibotai-input border border-ibotai-border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-ibotai-gold text-sm">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Confirm Password</label>
+          <input type="password" id="confirmPassInput" placeholder="••••••••" class="w-full px-4 py-3 bg-ibotai-input border border-ibotai-border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-ibotai-gold text-sm">
+        </div>
+      </div>
+
+      <!-- Control Buttons Trigger Panel -->
+      <div class="flex items-center gap-3 pt-2">
+        <button type="button" id="prevBtn" onclick="navigateStep(-1)" class="w-1/3 py-3.5 px-4 rounded-xl border border-ibotai-border text-sm font-bold text-slate-400 bg-transparent hover:bg-slate-800 focus:outline-none transition opacity-0 pointer-events-none cursor-pointer">
+          Back
+        </button>
+
+        <button type="button" id="nextBtn" onclick="navigateStep(1)" class="w-2/3 py-3.5 px-4 rounded-xl shadow-lg shadow-ibotai-gold/20 text-sm font-bold text-slate-900 bg-ibotai-gold hover:bg-ibotai-goldLight focus:outline-none transition transform active:scale-[0.99] cursor-pointer">
+          Next Step
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- JavaScript Handler Logic -->
+  <script>
+    let currentStep = 1;
+    const totalSteps = 3;
+
+    const stepTitles = {
+      1: "Personal Profile",
+      2: "Company Details",
+      3: "Security Credentials"
+    };
+
+    function navigateStep(direction) {
+      // Jab Next click ho, tab current step ke active inputs ko validate karein
+      if (direction === 1) {
+        const currentPanel = document.getElementById(`stepView-${currentStep}`);
+        const inputs = currentPanel.querySelectorAll('input');
+        
+        // HTML5 Validation Check
+        for (let input of inputs) {
+          if (!input.checkValidity()) {
+            input.reportValidity();
+            return; // Agar details empty hain to stop karega
+          }
+        }
+
+        // Custom validation check Step-2 ke liye
+        if (currentStep === 2) {
+          if (!document.getElementById('companyInput').value || !document.getElementById('phoneInput').value) {
+            alert("Please fill all fields before proceeding.");
+            return;
+          }
+        }
+      }
+
+      // Step changes count logic
+      currentStep += direction;
+
+      if (currentStep > totalSteps) {
+        currentStep = totalSteps;
+        return;
+      }
+
+      updateFormUI();
+    }
+
+    function updateFormUI() {
+      // Sabhi Panels hidden toggle state manage karein
+      document.querySelectorAll('.step-panel').forEach(panel => panel.classList.add('hidden'));
+      document.getElementById(`stepView-${currentStep}`).classList.remove('hidden');
+
+      // Labels modify karein
+      document.getElementById('stepLabel').innerText = `Step ${currentStep} of ${totalSteps}`;
+      document.getElementById('stepTitle').innerText = stepTitles[currentStep];
+
+      // Progress Tracker Bars Update
+      for (let i = 1; i <= totalSteps; i++) {
+        const bar = document.getElementById(`bar-${i}`);
+        if (i <= currentStep) {
+          bar.classList.replace('bg-ibotai-border', 'bg-ibotai-gold');
+        } else {
+          bar.classList.replace('bg-ibotai-gold', 'bg-ibotai-border');
+        }
+      }
+
+      // Back Button opacity control
+      const prevBtn = document.getElementById('prevBtn');
+      if (currentStep === 1) {
+        prevBtn.classList.add('opacity-0', 'pointer-events-none');
+      } else {
+        prevBtn.classList.remove('opacity-0', 'pointer-events-none');
+      }
+
+      // Final CTA Change
+      const nextBtn = document.getElementById('nextBtn');
+      if (currentStep === totalSteps) {
+        nextBtn.innerText = "Submit & Register";
+        nextBtn.setAttribute('type', 'submit');
+        nextBtn.removeAttribute('onclick');
+      } else {
+        nextBtn.innerText = "Next Step";
+        nextBtn.setAttribute('type', 'button');
+        nextBtn.setAttribute('onclick', 'navigateStep(1)');
+      }
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      // Step 3 Password Validation
+      const pass = document.getElementById('passInput').value;
+      const confirmPass = document.getElementById('confirmPassInput').value;
+      
+      if(pass !== confirmPass) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      alert("Registration Successful! Redirecting to Portal Dashboard...");
+      // Aap yahan apna fetch/axios integration script execute kar sakte hain.
+    }
+  </script>
+</body>
+</html>
